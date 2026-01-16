@@ -1,73 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="QD - Cafe All Day. Elevate your dining experience up a notch with QD. Serving since 2008." />
-    <!-- Brand Name for Crawlers -->
-    <meta property="og:site_name" content="QD" />
-    <meta property="og:title" content="QD - Cafe All Day" />
-    <title>QD - Cafe All Day</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafe Emporio | Luxury Atrium Lounge at DLF Emporio</title>
+    <meta name="description" content="Experience the luxury of Cafe Emporio at DLF Emporio, New Delhi. Enjoy delectable crepes, waffles, and freshly brewed coffee in a contemporary atrium setting.">
+    
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./style.css" />
-  </head>
-  <body>
-    <div id="app">
-      <header class="glass-header">
-        <div class="container header-content">
-          <div class="brand">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtfHn_kbA7h8QxuWgUOiFrUcNdHWlgXrL2zg&s" alt="QD Logo" class="logo" />
-            <h1 class="brand-name">QD</h1>
-          </div>
-          <nav>
-            <a href="#locations">Locations</a>
-            <a href="https://www.instagram.com/qdrestaurant/?hl=en" target="_blank" class="instagram-link">Instagram</a>
-          </nav>
-        </div>
-      </header>
-
-      <main>
-        <section class="hero">
-          <div class="hero-content">
-            <span class="est">Est. 2008</span>
-            <h2 class="hero-title">Elevate your dining experience <br> up a notch with QD</h2>
-            <p class="hero-subtitle">Cafe All Day</p>
-            <a href="https://g.co/kgs/SJ1Cxz" target="_blank" class="cta-button">Find Us</a>
-          </div>
-          <div class="hero-background"></div>
-        </section>
-
-        <section id="locations" class="info-section">
-          <div class="container">
-            <div class="info-grid">
-              <div class="info-card">
-                <h3>📍 Our Locations</h3>
-                <ul class="location-list">
-                  <li>Hudson Lane</li>
-                  <li>Lajpat Nagar</li>
-                  <li>Pacific Mall, NSP</li>
-                </ul>
-              </div>
-              <div class="info-card">
-                <h3>⏱ Timings</h3>
-                <p class="time-display">12:00 - 23:00</p>
-                <p class="status-text">Open All Days</p>
-              </div>
-            </div>
-          </div>
-        </section>
-      </main>
-
-      <footer>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <!-- Navigation -->
+    <nav class="navbar">
         <div class="container">
-          <p>QDS Hospitality Private Limited</p>
-          <p class="gstin">GSTIN: 07AAACQ7728G1ZB</p>
-          <p class="copyright">&copy; 2026 QD. All rights reserved.</p>
+            <a href="#" class="logo">Cafe Emporio</a>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#menu">Menu</a>
+                <a href="#location">Visit Us</a>
+            </div>
+            <div class="mobile-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </div>
         </div>
-      </footer>
-    </div>
-    <script type="module" src="./main.js"></script>
-  </body>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content container">
+            <span class="subtitle">Welcome to</span>
+            <h1>Cafe Emporio</h1>
+            <p>A contemporary atrium lounge amidst super luxurious brands.</p>
+            <a href="#location" class="btn btn-primary">Visit Us Today</a>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="section about">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="tagline">The Experience</span>
+                <h2>Luxury Defined</h2>
+                <div class="line"></div>
+            </div>
+            <div class="about-content text-center">
+                <p>Located on the ground floor at <strong>DLF Emporio</strong>, this atrium lounge Café, with its contemporary settings, is amidst super luxurious brands. It offers a serene escape where elegance meets comfort.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu / Highlights Section -->
+    <section id="menu" class="section menu-highlights">
+        <div class="container split-layout">
+            <div class="image-wrapper">
+                <img src="assets/food.png" alt="Gourmet Coffee and Waffles at Cafe Emporio">
+                <div class="image-decor"></div>
+            </div>
+            <div class="text-content">
+                <span class="tagline">Indulge</span>
+                <h2>Taste the Perfection</h2>
+                <p>Delectable crepes, sweet and savoury waffles, healthy sandwiches, fresh salads, some great thirst quenchers and freshly brewed coffee will keep you energized while you indulge with brands like Armani, Hugo Boss, Jimmy Choo and many more.</p>
+                
+                <ul class="features-list">
+                    <li><i class="fa-solid fa-mug-hot"></i> Freshly Brewed Coffee</li>
+                    <li><i class="fa-solid fa-utensils"></i> Sweet & Savoury Waffles</li>
+                    <li><i class="fa-solid fa-leaf"></i> Healthy Salads & Sandwiches</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location & Info Bundle -->
+    <section id="location" class="section info-bundle">
+        <div class="container">
+            <div class="info-grid">
+                <!-- Contact Card -->
+                <div class="info-card contact-card">
+                    <i class="fa-solid fa-location-dot icon"></i>
+                    <h3>Locate Us</h3>
+                    <p><strong>Address:</strong> Shop 301 - 301A, 3, Nelson Mandela Marg, Vasant Kunj II, Vasant Kunj, New Delhi, Delhi 110070</p>
+                    <p class="sub-text">Located in DLF Emporio</p>
+                    <a href="https://share.google/aVGXOW8OYwZtYYuFw" target="_blank" class="link-btn">View on Google Maps <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Hours Card -->
+                <div class="info-card hours-card">
+                    <i class="fa-regular fa-clock icon"></i>
+                    <h3>Opening Hours</h3>
+                    <ul class="hours-list">
+                        <li><span>Monday - Sunday</span> <span>11:00 AM – 9:00 PM</span></li>
+                    </ul>
+                </div>
+
+                <!-- Phone Card -->
+                <div class="info-card phone-card">
+                    <i class="fa-solid fa-phone icon"></i>
+                    <h3>Contact</h3>
+                    <p>For reservations and inquiries:</p>
+                    <a href="tel:+919650565900" class="phone-link">+91 9650565900</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container text-center">
+            <div class="footer-logo">Cafe Emporio</div>
+            <div class="social-links">
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+            <p>&copy; 2024 Cafe Emporio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
 </html>
