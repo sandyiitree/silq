@@ -34,21 +34,26 @@
     box-sizing: border-box;
 }
 
-html,
+html {
+    /* This allows the page to grow naturally but kills the side-scroll */
+    overflow-x: hidden;
+    width: 100%;
+}
+
 body {
     background-color: var(--color-bg-light);
     color: var(--color-text-dark);
     font-family: var(--font-inter);
-    overflow-x: hidden;
-    width: 100%;
     margin: 0;
+    width: 100%;
+    /* overflow-x: hidden on body can sometimes interfere with sticky elements, 
+       so we mainly rely on the html tag fix above. */
     position: relative;
 }
 
-/* Prevent vertical scrolling when menu is open */
+/* Prevent vertical scrolling when menu is open - toggled by JS on html/body */
 .no-scroll {
     overflow: hidden !important;
-    height: 100vh;
 }
 
 a {
@@ -511,18 +516,26 @@ footer {
 
     .nav-links {
         position: fixed;
-        top: 0;
-        right: 0;
+        inset: 0;
         width: 100%;
-        height: 100vh;
+        height: 100dvh;
+        /* Dynamic viewport height */
         background-color: var(--color-bg-light);
+
+        display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+
         transform: translateX(100%);
         visibility: hidden;
-        transition: transform 0.4s ease-in-out;
+        transition: transform 0.4s ease-in-out, visibility 0.4s;
         z-index: 150;
+    }
+
+    .nav-links.active {
+        transform: translateX(0);
+        visibility: visible;
     }
 
     .nav-links a {
