@@ -4,130 +4,153 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us | Cafe Emporio by RIVERIA COMMERCIAL DEVELOPERS LIMITED</title>
-    <meta name="description"
-        content="Learn more about Cafe Emporio, owned by RIVERIA COMMERCIAL DEVELOPERS LIMITED. Luxury atrium lounge at DLF Emporio.">
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Outfit:wght@300;400;500;600&display=swap"
-        rel="stylesheet">
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <!-- Custom CSS -->
+    <title>About Silq - A Timeless Journey</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        .page-header {
-            padding-top: 120px;
-            padding-bottom: 60px;
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('assets/hero.png');
-            background-size: cover;
-            background-position: center;
-            text-align: center;
-        }
-
-        .content-section {
-            padding: 60px 0;
-            background: var(--color-bg);
-        }
-
-        .trust-box {
-            background: var(--color-glass);
-            border: 1px solid var(--color-primary);
-            padding: 2rem;
-            margin-top: 2rem;
-            text-align: center;
-            border-radius: 4px;
-        }
-
-        .trust-box h3 {
-            color: var(--color-primary);
-            margin-bottom: 1rem;
-        }
-
-        .trust-box p {
-            font-size: 1.1rem;
-            color: var(--color-white);
-        }
-    </style>
+    <link rel="icon" type="image/svg+xml" href="assets/Silq_Logo.svg">
 </head>
 
 <body>
 
     <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <a href="index.html" class="logo">
-                <img src="assets/logo.png" alt="Cafe Emporio Logo">
-                <span>Cafe Emporio</span>
+    <!-- Section 1: Navigation (80px, Visible) -->
+    <!-- Applying .about-nav styles we added to CSS -->
+    <nav class="navbar about-nav">
+        <div class="nav-logo">
+            <a href="index.html">
+                <img src="assets/Silq_Logo.svg" alt="Silq Logo" style="filter: invert(0);">
+                <!-- Explicitly dark logo or use a dark variant if exists. Assuming SVG is black by default or invert filter makes it black if originally white? Wait, index.html had white logo on dark overlay. If original SVG is black, it needs no invert on white. Let's check SVG. Assuming standard logo. -->
             </a>
-            <div class="nav-links">
-                <a href="index.html">Home</a>
-                <a href="about.html">About Us</a>
-                <a href="index.html#menu">Menu</a>
-                <a href="index.html#location">Visit Us</a>
-            </div>
-            <div class="mobile-toggle">
-                <i class="fa-solid fa-bars"></i>
-            </div>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="#menu">Menu</a>
+            <a href="about.html" class="active">About</a>
+            <a href="#experiences">Experiences</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#press">Press</a>
+            <a href="#location">Location</a>
+            <a href="#contact">Contact</a>
+            <a href="#reserve" class="btn-reserve">Reserve Now</a>
+        </div>
+        <div class="mobile-toggle">
+            <!-- Mobile Toggle needs dark spans -->
+            <span style="background-color: #000;"></span>
+            <span style="background-color: #000;"></span>
+            <span style="background-color: #000;"></span>
         </div>
     </nav>
 
-    <!-- Page Header -->
-    <header class="page-header">
-        <div class="container">
-            <h1>About Us</h1>
-            <div class="line"></div>
+    <!-- Section 2: About Us Header (160px, #E9F3FB) -->
+    <section class="about-page-header">
+        <div class="text-about-header">About us</div>
+    </section>
+
+    <!-- About The Food (Images Scrollable Right) -->
+    <section class="about-food" style="overflow: hidden;"> <!-- Ensure no horizontal scroll causing page shift -->
+        <div class="silq-text" style="flex: 0 0 40%;"> <!-- Fixed width for text -->
+            <h2 class="text-section-heading">About the Food</h2>
+            <br>
+            <p class="text-body-serif" style="color: var(--color-primary-blue);">
+                SILQ draws its soul from the ancient Silk Route, a passage where Persia, Hindustan, the Levant and the
+                Mediterranean once met through spice, stories and shared traditions.
+            </p>
+            <br>
+            <p class="text-body-large" style="font-size: 18px; line-height: 1.8;">
+                Our cuisine is shaped by this heritage, expressed in dishes that are layered, elegant and quietly
+                indulgent. Every plate is crafted with balance in mind, letting depth, nuance and honest ingredients
+                take centre stage.
+            </p>
         </div>
-    </header>
 
-    <!-- Main Content -->
-    <section class="content-section">
-        <div class="container">
-            <div class="about-content text-center">
-                <h2>Our Story</h2>
-                <p style="max-width: 800px; margin: 0 auto 2rem auto;">
-                    Located on the ground floor at DLF Emporio, our atrium lounge Café offers a contemporary setting
-                    amidst super luxurious brands. It is a serene escape where elegance meets comfort.
-                </p>
-                <p style="max-width: 800px; margin: 0 auto 2rem auto;">
-                    We pride ourselves on serving delectable crepes, sweet and savoury waffles, healthy sandwiches,
-                    fresh salads, and freshly brewed coffee. Whether you are taking a break from shopping or meeting
-                    friends, Cafe Emporio provides the perfect ambiance.
-                </p>
+        <!-- Reusing .silq-gallery class for scrolling behavior -->
+        <div class="silq-gallery" style="flex: 1; min-width: 0;">
+            <!-- min-width: 0 is crucial for flex child scrolling -->
+            <img src="assets/Food_Image_1.jpg" alt="Food 1">
+            <img src="assets/image 1654.png" alt="Food 2">
+            <img src="assets/image 1653.png" alt="Food 3">
+            <!-- Add duplicates for scrolling effect if needed -->
+            <img src="assets/Food_Image_1.jpg" alt="Food 4">
+        </div>
+    </section>
 
-                <div class="trust-box">
-                    <h3>Ownership Information</h3>
-                    <p><strong>Cafe Emporio</strong> is owned by <strong>RIVERIA COMMERCIAL DEVELOPERS LIMITED</strong>
-                    </p>
-                    <p style="margin-top: 0.5rem;">GST Number: 07AADCR5360C1ZN</p>
-                    <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">
-                        Registered Address: The Chanakya, Yashwant Place Community Centre, Chankyapuri , New Delhi,
-                        Delhi, India - 110021
-                    </p>
-                </div>
-            </div>
+    <!-- Experience Text Block (Left Align) -->
+    <section class="section-experience" style="background: white; padding: 100px 20%;">
+        <div class="about-text-block" style="text-align: left; margin: 0;">
+            <h2 class="text-section-heading" style="color: var(--color-primary-blue);">Experience</h2>
+            <br>
+            <p class="text-body-large"
+                style="font-family: var(--font-playfair); font-weight: 500; font-size: 24px; line-height: 40px;">
+                At SILQ, the experience begins before the first course arrives. As you take your seat, a Ritual Note
+                awaits you, a gentle guide to the evening’s journey, the stories behind our flavours and the small
+                moments we’ve woven in for you to discover.
+            </p>
+            <br>
+            <p class="text-body-large"
+                style="font-family: var(--font-playfair); font-weight: 500; font-size: 24px; line-height: 40px;">
+                The ambience shifts with every visit: soft light, calm textures and live music that changes each day.
+                One evening it may be the sitar, another the rabab, sarangi or sarod, each bringing its own mood and
+                magic to the room. No two nights feel alike and that’s the beauty of it.
+            </p>
+            <br>
+            <p class="text-body-large"
+                style="font-family: var(--font-playfair); font-weight: 500; font-size: 24px; line-height: 40px;">
+                At SILQ, you don’t just dine, you experience something that stays with you and keeps you coming back.
+            </p>
+        </div>
+    </section>
+
+    <!-- Rituals by Silq -->
+    <section class="section-rituals" style="background: #E9F3FB; padding: 100px 5%; text-align: center;">
+        <div style="max-width: 900px; margin: 0 auto; margin-bottom: 60px;">
+            <!-- Could use the SVG text here if clean, else text -->
+            <img src="assets/Rituals by Silq_logo.svg" alt="Rituals by Silq"
+                style="height: 100px; margin: 0 auto 40px;">
+
+            <p class="text-body-serif" style="color: var(--color-accent-blue);">
+                At SILQ, dining is a ritual of presence inspired by the Silk Route. Through fragrance, flame, taste,
+                touch and music, tradition meets storytelling, awakening the senses and leaving an enduring impression.
+            </p>
+        </div>
+
+        <div style="max-width: 1000px; margin: 0 auto; border-radius: 20px; overflow: hidden;">
+            <img src="assets/Rituals by Silq.svg" alt="Rituals Graphic" style="width: 100%; display: block;">
+            <!-- Fallback to a nice image if SVG is just text/logo. Let's use an ambience image. -->
+            <img src="assets/DSC01313.jpg" alt="Rituals Ambience" style="width: 100%; margin-top: -5px;">
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container text-center">
-            <div class="footer-logo">Cafe Emporio</div>
-            <div class="social-links">
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+    <footer>
+        <div class="footer-block"
+            style="display:flex; justify-content:space-between; width:100%; max-width:1200px; padding: 40px 0;">
+            <div style="flex:1;">
+                <img src="assets/Silq_Logo.svg" alt="Footer Logo"
+                    style="height: 60px; filter: brightness(0) invert(1);">
             </div>
-            <div class="footer-legal">
-                <p class="legal-name">Cafe Emporio by RIVERIA COMMERCIAL DEVELOPERS LIMITED</p>
-                <p class="gst-number">GST: 07AADCR5360C1ZN</p>
+
+            <div class="footer-nav">
+                <a href="#">Contact</a>
+                <a href="#">Shop</a>
+                <a href="#">Careers</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms & Conditions</a>
             </div>
-            <p>&copy; 2024 Cafe Emporio. All rights reserved.</p>
+
+            <div class="social-links" style="display:flex; gap:20px;">
+                <img src="assets/facebook.svg" style="height:20px;">
+                <img src="assets/Instagram.svg" style="height:20px;">
+                <img src="assets/X.svg" style="height:20px;">
+            </div>
+        </div>
+
+        <div style="text-align:center; color: var(--color-gray); font-size:12px; font-weight:500;">
+            SILQ is proud to be an Equal Opportunity Employer
+        </div>
+
+        <div class="footer-divider" style="margin: 20px 0;"></div>
+
+        <div class="footer-bottom">
+            <div>1994-2023 SILQ. All rights reserved.</div>
         </div>
     </footer>
 

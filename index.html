@@ -4,146 +4,171 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cafe Emporio by RIVERIA COMMERCIAL DEVELOPERS LIMITED</title>
-    <meta name="description"
-        content="Experience the luxury of Cafe Emporio at DLF Emporio, New Delhi. Enjoy delectable crepes, waffles, and freshly brewed coffee in a contemporary atrium setting.">
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Outfit:wght@300;400;500;600&display=swap"
-        rel="stylesheet">
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <!-- Custom CSS -->
+    <title>Silq - A Journey of Cultures</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/Silq_Logo.svg">
 </head>
 
 <body>
 
     <!-- Navigation -->
     <nav class="navbar">
-        <div class="container">
-            <a href="index.html" class="logo">
-                <img src="assets/logo.png" alt="Cafe Emporio Logo">
-                <span>Cafe Emporio</span>
+        <div class="nav-logo">
+            <a href="index.html">
+                <img src="assets/Silq_Logo.svg" alt="Silq Logo">
             </a>
-            <div class="nav-links">
-                <a href="index.html">Home</a>
-                <a href="about.html">About Us</a>
-                <a href="#menu">Menu</a>
-                <a href="#location">Visit Us</a>
-            </div>
-            <div class="mobile-toggle">
-                <i class="fa-solid fa-bars"></i>
-            </div>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="#menu">Menu</a>
+            <a href="about.html">About</a>
+            <a href="#experiences">Experiences</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#press">Press</a>
+            <a href="#location">Location</a>
+            <a href="#contact">Contact</a>
+            <a href="#reserve" class="btn-reserve">Reserve Now</a>
+        </div>
+        <div class="mobile-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <header id="home" class="hero">
-        <div class="hero-bg"></div>
-        <div class="hero-overlay"></div>
-        <div class="hero-content container">
-            <span class="subtitle">Welcome to</span>
-            <h1>Cafe Emporio</h1>
-            <p>A contemporary atrium lounge amidst super luxurious brands.</p>
-            <p style="font-size: 0.9rem; margin-top: -20px; opacity: 0.8;">by RIVERIA COMMERCIAL DEVELOPERS LIMITED</p>
-            <a href="#location" class="btn btn-primary">Visit Us Today</a>
+    <header class="hero">
+        <div class="hero-bg">
+            <img src="assets/Home-page-cover-image.jpg" alt="Silq Cover">
+            <div class="hero-overlay"></div>
+        </div>
+
+        <div class="hero-content">
+            <h1 class="text-hero-title">
+                A journey of cultures and rituals through the <br>
+                timeless trails of the Silk Route.
+            </h1>
+        </div>
+
+        <div class="scroll-indicator">
+            <div class="text-scroll">Scroll</div>
+            <div class="mouse-icon">
+                <div class="mouse-wheel"></div>
+            </div>
         </div>
     </header>
 
-    <!-- About Section -->
-    <section id="about" class="section about">
-        <div class="container">
-            <div class="section-header text-center">
-                <span class="tagline">The Experience</span>
-                <h2>Luxury Defined</h2>
-                <div class="line"></div>
+    <!-- Silq Intro Section -->
+    <section class="section-silq">
+        <div class="silq-text">
+            <h2 class="text-section-heading">Silq</h2>
+            <p class="text-body-serif">
+                An immersive journey inspired by the ancient Silk Route where cultures, rituals, and quiet luxuries
+                unfold. SILQ is our ode to fire, fragrance, and heritage served with grace, weaving diverse traditions
+                together, one plate at a time.
+            </p>
+        </div>
+        <div class="silq-gallery">
+            <img src="assets/DSC01460.jpg" alt="Silq Interior">
+            <img src="assets/DSC01658.jpg" alt="Silq Detail">
+            <img src="assets/DSC01313.jpg" alt="Silq Ambience">
+            <img src="assets/DSC02147.jpg" alt="Silq Food">
+        </div>
+    </section>
+
+    <!-- The Silq Experience -->
+    <section id="experiences" class="section-experience">
+        <div class="exp-header">
+            <h2 class="text-section-heading">The Silq Experience</h2>
+            <br>
+            <p class="text-body-large" style="color: var(--color-primary-blue);">
+                A journey of rituals, flavours and moments that <br>unfold slowly.
+            </p>
+        </div>
+
+        <div class="exp-grid">
+            <div class="exp-card">
+                <img src="assets/DSC01781.jpg" alt="Experience 1">
             </div>
-            <div class="about-content text-center">
-                <p>Located on the ground floor at <strong>DLF Emporio</strong>, this atrium lounge Café, with its
-                    contemporary settings, is amidst super luxurious brands. It offers a serene escape where elegance
-                    meets comfort.</p>
+            <div class="exp-card">
+                <img src="assets/SILQ INT (16 of 16).jpg" alt="Experience 2">
+            </div>
+            <div class="exp-card">
+                <img src="assets/DSC01658 2.png" alt="Experience 3">
+                <!-- Play button overlay simulated -->
+                <div
+                    style="position: absolute; top:50%; left:50%; transform:translate(-50%, -50%); width:60px; height:60px; background:rgba(0,0,0,0.5); border-radius:50%; display:flex; align-items:center; justify-content:center;">
+                    <div
+                        style="border-left: 20px solid white; border-top: 12px solid transparent; border-bottom: 12px solid transparent; padding-left: 5px;">
+                    </div>
+                </div>
+            </div>
+            <div class="exp-card">
+                <img src="assets/DSC01460 2.png" alt="Experience 4">
             </div>
         </div>
     </section>
 
-    <!-- Menu / Highlights Section -->
-    <section id="menu" class="section menu-highlights">
-        <div class="container split-layout">
-            <div class="image-wrapper">
-                <img src="assets/food.png" alt="Gourmet Coffee and Waffles at Cafe Emporio">
-                <div class="image-decor"></div>
+    <!-- Timing & Map -->
+    <section class="section-timing">
+        <div class="timing-info">
+            <div class="timing-block">
+                <h2 class="text-section-heading">Timing</h2>
+                <div class="text-body-large" style="margin-top: 20px;">
+                    <p>Lunch: 12:00 PM - 04:00 PM</p>
+                    <p>Dinner: 06:30 PM - 12:00 AM</p>
+                </div>
             </div>
-            <div class="text-content">
-                <span class="tagline">Indulge</span>
-                <h2>Taste the Perfection</h2>
-                <p>Delectable crepes, sweet and savoury waffles, healthy sandwiches, fresh salads, some great thirst
-                    quenchers and freshly brewed coffee will keep you energized while you indulge with brands like
-                    Armani, Hugo Boss, Jimmy Choo and many more.</p>
 
-                <ul class="features-list">
-                    <li><i class="fa-solid fa-mug-hot"></i> Freshly Brewed Coffee</li>
-                    <li><i class="fa-solid fa-utensils"></i> Sweet & Savoury Waffles</li>
-                    <li><i class="fa-solid fa-leaf"></i> Healthy Salads & Sandwiches</li>
-                </ul>
+            <div class="timing-block">
+                <h2 class="text-section-heading">Location Map</h2>
+                <div class="text-body-large" style="margin-top: 20px;">
+                    <p>14/48 Malcha Marg</p>
+                    <p>Chanakya Puri, Diplomatic Enclave</p>
+                    <p>New Delhi - 110021</p>
+                    <p>+91 8888 22 0000</p>
+                </div>
             </div>
         </div>
-    </section>
 
-    <!-- Location & Info Bundle -->
-    <section id="location" class="section info-bundle">
-        <div class="container">
-            <div class="info-grid">
-                <!-- Contact Card -->
-                <div class="info-card contact-card">
-                    <i class="fa-solid fa-location-dot icon"></i>
-                    <h3>Locate Us</h3>
-                    <p><strong>Address:</strong> Shop 301 - 301A, 3, Nelson Mandela Marg, Vasant Kunj II, Vasant Kunj,
-                        New Delhi, Delhi 110070</p>
-                    <p class="sub-text">Located in DLF Emporio</p>
-                    <a href="https://share.google/aVGXOW8OYwZtYYuFw" target="_blank" class="link-btn">View on Google
-                        Maps <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
-
-                <!-- Hours Card -->
-                <div class="info-card hours-card">
-                    <i class="fa-regular fa-clock icon"></i>
-                    <h3>Opening Hours</h3>
-                    <ul class="hours-list">
-                        <li><span>Monday - Sunday</span> <span>11:00 AM – 9:00 PM</span></li>
-                    </ul>
-                </div>
-
-                <!-- Phone Card -->
-                <div class="info-card phone-card">
-                    <i class="fa-solid fa-phone icon"></i>
-                    <h3>Contact</h3>
-                    <p>For reservations and inquiries:</p>
-                    <a href="tel:+919650565900" class="phone-link">+91 9650565900</a>
-                </div>
-            </div>
+        <div class="location-image">
+            <!-- Using a placeholder for map, ideally this should be a Google Maps iframe or a static map image -->
+            <img src="assets/Header_Image_BG.jpg" alt="Map Location"
+                style="height: 100%; width: 100%; object-fit: cover;">
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container text-center">
-            <div class="footer-logo">Cafe Emporio</div>
+    <footer>
+        <div class="footer-block">
+            <div class="footer-logo-box">
+                <img src="assets/Silq_Logo.svg" alt="Footer Logo" class="footer-logo-img">
+            </div>
+
+            <div class="footer-nav">
+                <a href="#">Contact</a>
+                <a href="#">Shop</a>
+                <a href="#">Careers</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms & Conditions</a>
+            </div>
+
             <div class="social-links">
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <img src="assets/facebook.svg" style="height:20px;">
+                <img src="assets/Instagram.svg" style="height:20px;">
+                <img src="assets/X.svg" style="height:20px;">
             </div>
-            <div class="footer-legal">
-                <p class="legal-name">Cafe Emporio by RIVERIA COMMERCIAL DEVELOPERS LIMITED</p>
-                <p class="gst-number">GST: 07AADCR5360C1ZN</p>
-            </div>
-            <p>&copy; 2024 Cafe Emporio. All rights reserved.</p>
+        </div>
+
+        <div style="text-align:center; color: var(--color-gray); font-size:12px; font-weight:500;">
+            SILQ is proud to be an Equal Opportunity Employer
+        </div>
+
+        <div class="footer-divider" style="margin: 20px 0;"></div>
+
+        <div class="footer-bottom">
+            <div>1994-2023 SILQ. All rights reserved.</div>
         </div>
     </footer>
 

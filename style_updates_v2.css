@@ -1,0 +1,84 @@
+/* About Page Specific Overrides */
+
+/* Section 1: Header/Nav (Desktop: ~80px) */
+/* Override default navbar positioning for about page if needed, or adjust globally */
+/* The user wants a distinct header section of ~80px. 
+   Currently .navbar is absolute. For About us page, maybe we want it relative or just constrained?
+   "1 section (header with clickabe navigation and logo) - around 80 px"
+   This implies the navbar itself IS this section.
+*/
+.about-nav {
+    position: relative !important;
+    /* Not absolute over image */
+    background: var(--color-white) !important;
+    height: 80px;
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.about-nav .nav-logo img {
+    height: 40px;
+    /* Reduced to fit 80px */
+}
+
+.about-nav .nav-links a {
+    color: var(--color-text-dark);
+    /* Dark text on white bg */
+}
+
+.about-nav .btn-reserve {
+    padding: 8px 16px;
+    font-size: 14px;
+}
+
+/* Section 2: About Us Header (~160px) */
+.about-page-header {
+    width: 100%;
+    height: 160px;
+    /* Explicit height */
+    background: #E9F3FB;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 0;
+    /* Remove gap if any */
+}
+
+.text-about-header {
+    color: #0D0C0C;
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 48px;
+    word-wrap: break-word;
+    /* User provided absolute position left: 800px top:56px which is roughly center. Flex center is safer. */
+}
+
+/* About Content spacing */
+.about-food {
+    padding: 60px 5%;
+    /* Adjust padding if needed */
+}
+
+/* Experience Text Alignment */
+.section-experience .about-text-block {
+    text-align: left !important;
+    /* Left align as requested */
+    margin: 40px 0;
+    /* Reset auto margin */
+}
+
+/* Footer Height (Desktop ~200px) */
+/* Current footer styles are in previous block. We will override. */
+footer {
+    min-height: 200px;
+    padding: 40px 5% !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

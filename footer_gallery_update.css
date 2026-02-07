@@ -1,0 +1,77 @@
+/* Silq Gallery Scrollable */
+.silq-gallery {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding-bottom: 20px;
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE/Edge */
+    width: 100%;
+}
+
+.silq-gallery::-webkit-scrollbar {
+    display: none;
+    /* Chrome/Safari/Opera */
+}
+
+.silq-gallery img {
+    height: 400px;
+    width: auto;
+    flex-shrink: 0;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+/* Footer Fixes */
+footer {
+    padding: 30px 5% !important;
+    /* Override explicit padding if needed */
+    height: auto !important;
+}
+
+.footer-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* Align items vertically */
+    flex-wrap: wrap;
+    /* Allow wrapping on small screens */
+    gap: 30px;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.footer-logo-img {
+    height: 60px;
+    filter: brightness(0) invert(1);
+}
+
+.footer-nav {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.social-links {
+    display: flex;
+    gap: 20px;
+}
+
+/* Responsive Footer */
+@media (max-width: 900px) {
+    .footer-block {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding: 20px 0 !important;
+        /* Override inline styles */
+    }
+
+    .footer-nav {
+        gap: 15px;
+        flex-direction: column;
+    }
+}

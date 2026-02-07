@@ -4,17 +4,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (mobileToggle) {
         mobileToggle.addEventListener('click', () => {
+            mobileToggle.classList.toggle('active');
             navLinks.classList.toggle('active');
-            
-            // Toggle icon
-            const icon = mobileToggle.querySelector('i');
-            if (navLinks.classList.contains('active')) {
-                icon.classList.remove('fa-bars');
-                icon.classList.add('fa-xmark');
-            } else {
-                icon.classList.remove('fa-xmark');
-                icon.classList.add('fa-bars');
-            }
         });
     }
 
@@ -22,24 +13,28 @@ document.addEventListener('DOMContentLoaded', () => {
     const links = document.querySelectorAll('.nav-links a');
     links.forEach(link => {
         link.addEventListener('click', () => {
-            if (navLinks.classList.contains('active')) {
-                navLinks.classList.remove('active');
-                const icon = mobileToggle.querySelector('i');
-                icon.classList.remove('fa-xmark');
-                icon.classList.add('fa-bars');
-            }
+            mobileToggle.classList.remove('active');
+            navLinks.classList.remove('active');
         });
     });
 
-    // Navbar scroll effect
+    // Smooth scroll handling for anchor links if needed (CSS scroll-behavior handles most)
+    // Add header background on scroll
     const navbar = document.querySelector('.navbar');
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
-            navbar.style.background = 'rgba(10, 10, 10, 0.95)';
-            navbar.style.padding = '1rem 0';
+            navbar.style.background = 'rgba(24, 62, 105, 0.9)'; // Primary blue with opacity
+            navbar.style.backdropFilter = 'blur(10px)';
         } else {
-            navbar.style.background = 'rgba(10, 10, 10, 0.8)';
-            navbar.style.padding = '1.5rem 0';
+            // Check if we are on a page where it should be transparent initially
+            // For now, reset to original state (transparent or whatever CSS defined)
+            if (window.innerWidth > 900) {
+                 navbar.style.background = 'transparent';
+                 navbar.style.backdropFilter = 'none';
+            } else {
+                 navbar.style.background = 'rgba(0,0,0,0.2)'; // Mobile default
+                 navbar.style.backdropFilter = 'none';
+            }
         }
     });
 });
