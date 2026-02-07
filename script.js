@@ -22,13 +22,12 @@ function initNavigation() {
     const mobileToggle = document.querySelector('.mobile-toggle');
     const navLinks = document.querySelector('.nav-links');
     const navbar = document.querySelector('.navbar');
-    const body = document.querySelector('body'); // Helper for locking scroll
 
     if (mobileToggle && navLinks) {
         mobileToggle.addEventListener('click', () => {
             mobileToggle.classList.toggle('active'); // Animate toggle icon
             navLinks.classList.toggle('active');   // Show/hide menu
-            body.classList.toggle('no-scroll');    // Lock/Unlock background scroll
+            document.body.classList.toggle('no-scroll'); // Locks background
         });
     }
 
@@ -38,7 +37,7 @@ function initNavigation() {
         link.addEventListener('click', () => {
             if (mobileToggle) mobileToggle.classList.remove('active');
             if (navLinks) navLinks.classList.remove('active');
-            if (body) body.classList.remove('no-scroll');
+            document.body.classList.remove('no-scroll');
         });
     });
 
