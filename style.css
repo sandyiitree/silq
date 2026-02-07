@@ -46,8 +46,8 @@ body {
     font-family: var(--font-inter);
     margin: 0;
     width: 100%;
-    /* overflow-x: hidden on body can sometimes interfere with sticky elements, 
-       so we mainly rely on the html tag fix above. */
+    overflow-x: hidden;
+    /* Added back to prevent mobile menu causing scroll */
     position: relative;
 }
 
