@@ -8,14 +8,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 navPlaceholder.innerHTML = data;
                 initNavigation(); // Initialize events after DOM is injected
 
-                // Apply 'about-nav' class if on about.html
-                if (window.location.pathname.includes('about.html')) {
-                    const nav = document.querySelector('.navbar');
-                    if (nav) {
-                        nav.classList.add('about-nav');
-                        // Ensure overlay logic works if needed, but CSS handles .about-nav specific backgrounds
-                    }
-                }
+                // Removed page-specific nav modifier logic as per user request
+                // Instead, About page will likely use same transparent nav over a new Hero/Cover section
             })
             .catch(error => console.error('Error loading navbar:', error));
     } else {
