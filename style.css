@@ -629,7 +629,7 @@ footer {
 /* Navbar: Use same structure, just handle background/position */
 .about-nav {
     position: relative !important;
-    background: url('assets/Header_Image_BG.jpg') center/cover no-repeat !important;
+    background: url('assets/DSC01313.jpg') center/cover no-repeat !important;
     height: 80px;
     /* Could be auto + padding to match home */
     padding: 0 5%;
