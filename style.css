@@ -544,12 +544,13 @@ footer {
 
 /* Footer Fixes */
 footer {
-    padding: 20px 5% !important;
+    padding: 30px 5% !important;
+    /* Standard padding */
     min-height: auto;
-    max-height: 200px;
+    /* Removed max-height 200px to ensure content is not cut off per user request */
     height: auto !important;
-    overflow-y: auto;
-    /* Allow scroll if content is too much for 200px, though unlikely */
+    overflow: visible;
+    /* Ensure content is visible */
 }
 
 .footer-block {
