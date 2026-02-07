@@ -94,6 +94,7 @@ img {
     font-weight: 600;
     text-transform: capitalize;
     line-height: 1.2;
+    text-align: center;
 }
 
 .text-body-large {
@@ -129,7 +130,7 @@ img {
 }
 
 .nav-logo img {
-    height: 60px;
+    height: 40px;
     width: auto;
 }
 
@@ -378,7 +379,6 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 40px;
 }
 
 .footer-nav {
@@ -542,16 +542,7 @@ footer {
     object-fit: cover;
 }
 
-/* Footer Fixes */
-footer {
-    padding: 30px 5% !important;
-    /* Standard padding */
-    min-height: auto;
-    /* Removed max-height 200px to ensure content is not cut off per user request */
-    height: auto !important;
-    overflow: visible;
-    /* Ensure content is visible */
-}
+
 
 .footer-block {
     display: flex;
@@ -626,7 +617,6 @@ footer {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.6);
     /* Dark overlay */
     z-index: 0;
 }
