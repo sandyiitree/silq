@@ -1,11 +1,38 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // 1. Dynamic Navbar Loading
+    const navPlaceholder = document.getElementById('navbar-container');
+    if (navPlaceholder) {
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                navPlaceholder.innerHTML = data;
+                initNavigation(); // Initialize events after DOM is injected
+
+                // Apply 'about-nav' class if on about.html
+                if (window.location.pathname.includes('about.html')) {
+                    const nav = document.querySelector('.navbar');
+                    if (nav) {
+                        nav.classList.add('about-nav');
+                        // Ensure overlay logic works if needed, but CSS handles .about-nav specific backgrounds
+                    }
+                }
+            })
+            .catch(error => console.error('Error loading navbar:', error));
+    } else {
+        // Fallback for pages with static navbar
+        initNavigation();
+    }
+});
+
+function initNavigation() {
     const mobileToggle = document.querySelector('.mobile-toggle');
     const navLinks = document.querySelector('.nav-links');
+    const navbar = document.querySelector('.navbar');
 
-    if (mobileToggle) {
+    if (mobileToggle && navLinks) {
         mobileToggle.addEventListener('click', () => {
-            mobileToggle.classList.toggle('active');
-            navLinks.classList.toggle('active');
+            mobileToggle.classList.toggle('active'); // Animate toggle icon
+            navLinks.classList.toggle('active');   // Show/hide menu
         });
     }
 
@@ -13,28 +40,40 @@ document.addEventListener('DOMContentLoaded', () => {
     const links = document.querySelectorAll('.nav-links a');
     links.forEach(link => {
         link.addEventListener('click', () => {
-            mobileToggle.classList.remove('active');
-            navLinks.classList.remove('active');
+            if (mobileToggle) mobileToggle.classList.remove('active');
+            if (navLinks) navLinks.classList.remove('active');
         });
     });
 
-    // Smooth scroll handling for anchor links if needed (CSS scroll-behavior handles most)
-    // Add header background on scroll
-    const navbar = document.querySelector('.navbar');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            navbar.style.background = 'rgba(24, 62, 105, 0.9)'; // Primary blue with opacity
-            navbar.style.backdropFilter = 'blur(10px)';
-        } else {
-            // Check if we are on a page where it should be transparent initially
-            // For now, reset to original state (transparent or whatever CSS defined)
-            if (window.innerWidth > 900) {
-                 navbar.style.background = 'transparent';
-                 navbar.style.backdropFilter = 'none';
+    // Scroll Effect
+    if (navbar) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                // On scroll, solid background
+                navbar.classList.add('scrolled'); // Use CSS class for cleaner handling
+                navbar.style.background = 'rgba(24, 62, 105, 0.9)'; // Fallback if class not enough
+                navbar.style.backdropFilter = 'blur(10px)';
             } else {
-                 navbar.style.background = 'rgba(0,0,0,0.2)'; // Mobile default
-                 navbar.style.backdropFilter = 'none';
+                // Top of page
+                navbar.classList.remove('scrolled');
+
+                // IMPORTANT: Respect About page custom background logic
+                if (navbar.classList.contains('about-nav')) {
+                    // About page has its own background image logic in CSS
+                    navbar.style.background = ''; // Clear inline so CSS background-image takes over
+                    navbar.style.backdropFilter = '';
+                } else {
+                    // Home page or others
+                    if (window.innerWidth > 900) {
+                        navbar.style.background = 'transparent';
+                        navbar.style.backdropFilter = 'none';
+                    } else {
+                        // Mobile default logic
+                        navbar.style.background = 'rgba(0,0,0,0.2)';
+                        navbar.style.backdropFilter = 'none';
+                    }
+                }
             }
-        }
-    });
-});
+        });
+    }
+}

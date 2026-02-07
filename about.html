@@ -12,33 +12,8 @@
 <body>
 
     <!-- Navigation -->
-    <!-- Section 1: Navigation (80px, Visible) -->
-    <!-- Applying .about-nav styles we added to CSS -->
-    <nav class="navbar about-nav">
-        <div class="nav-logo">
-            <a href="index.html">
-                <img src="assets/Layer_1.svg" alt="Silq Logo" style="filter: invert(0);">
-                <!-- Explicitly dark logo or use a dark variant if exists. Assuming SVG is black by default or invert filter makes it black if originally white? Wait, index.html had white logo on dark overlay. If original SVG is black, it needs no invert on white. Let's check SVG. Assuming standard logo. -->
-            </a>
-        </div>
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="#menu">Menu</a>
-            <a href="about.html" class="active">About</a>
-            <a href="#experiences">Experiences</a>
-            <a href="#gallery">Gallery</a>
-            <a href="#press">Press</a>
-            <a href="#location">Location</a>
-            <a href="#contact">Contact</a>
-            <a href="#reserve" class="btn-reserve">Reserve Now</a>
-        </div>
-        <div class="mobile-toggle">
-            <!-- Mobile Toggle needs dark spans -->
-            <span style="background-color: #000;"></span>
-            <span style="background-color: #000;"></span>
-            <span style="background-color: #000;"></span>
-        </div>
-    </nav>
+    <div id="navbar-container"></div>
+    <script src="script.js"></script>
 
     <!-- Section 2: About Us Header (160px, #E9F3FB) -->
     <section class="about-page-header">
