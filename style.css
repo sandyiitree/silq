@@ -39,7 +39,9 @@ body {
     color: var(--color-text-dark);
     font-family: var(--font-inter);
     overflow-x: hidden;
+    /* Fix for "Mobile page is scrolling on right side" */
     width: 100%;
+    margin: 0;
 }
 
 a {
@@ -298,14 +300,29 @@ img {
     margin-bottom: 60px;
 }
 
+/* Experience Section Upgrade */
 .exp-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    display: flex;
     gap: 20px;
     height: 600px;
+    overflow-x: auto;
+    /* Enable Scroll */
+    scrollbar-width: none;
+    /* Hide scrollbar Firefox */
+    -ms-overflow-style: none;
+    /* Hide scrollbar IE */
+    padding-bottom: 20px;
+    /* Space for scroll if needed or visual balance */
+}
+
+.exp-grid::-webkit-scrollbar {
+    display: none;
+    /* Hide scrollbar Chrome/Safari */
 }
 
 .exp-card {
+    flex: 0 0 300px;
+    /* Specific width for cards when scrolling */
     border-radius: 16px;
     overflow: hidden;
     height: 100%;
@@ -598,18 +615,31 @@ footer {
    "1 section (header with clickabe navigation and logo) - around 80 px"
    This implies the navbar itself IS this section.
 */
+/* Global Scroll Utility */
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+
+.scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* About Page Specific Overrides */
+/* Navbar: Use same structure, just handle background/position */
 .about-nav {
     position: relative !important;
     background: url('assets/Header_Image_BG.jpg') center/cover no-repeat !important;
     height: 80px;
+    /* Could be auto + padding to match home */
     padding: 0 5%;
+    /* Home has 40px 5%? Let's check */
     display: flex;
+    /* Ensure flex for alignment */
     align-items: center;
     justify-content: space-between;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 
-/* Dark background overlay on image to make white text pop */
 .about-nav::before {
     content: "";
     position: absolute;
@@ -617,7 +647,7 @@ footer {
     left: 0;
     width: 100%;
     height: 100%;
-    /* Dark overlay */
+    background: rgba(0, 0, 0, 0.6);
     z-index: 0;
 }
 
@@ -628,16 +658,14 @@ footer {
 
 .about-nav .nav-logo img {
     height: 40px;
+    /* Reduced specific to About page to fit 80px constraint if Home is larger? */
     filter: brightness(0) invert(1) !important;
-    /* Force white logo */
 }
 
-/* White text for consistency */
 .about-nav .nav-links a {
     color: var(--color-white) !important;
 }
 
-/* Force white mobile toggle */
 .about-nav .mobile-toggle span {
     background-color: var(--color-white) !important;
 }
