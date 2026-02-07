@@ -173,34 +173,26 @@
                      A (Vector-4)
                      L (Vector-3)
                      S (Vector-2)
-                     B (Vector-1)
-                     Y (Vector-8)
-                     
-                     This maps perfectly to RITUALS BY.
-                     
-                     Bottom row was S, I, L, Q.
-                     If Vector.svg replaces "SILQ", I will put it there.
+                <!-- Bottom Row: SILQ (Replaced by Group.svg) -->
+                <!-- Positioning to cover the approximate area of SILQ (left~65px, width~180px)
+                     or centering it if Group.svg is the full logo unit.
+                     Given "silq is in group svg", it likely contains the whole word/logo.
+                     I'll stick to the previous S-I-L-Q bounding box approximation or just center it bottom?
+                     Original S left: 65.74, Q right edge: 181.25+64.79 = 246.04. Width = 180.3px.
                 -->
-
-                <!-- Bottom Row: SILQ (Replaced by single Vector.svg as per instruction) -->
                 <div style="width: 180.3px; height: 73.82px; left: 65.74px; top: 53.18px; position: absolute;">
-                    <img src="assets/Vector.svg"
+                    <img src="assets/Group.svg"
                         style="width: 100%; height: 100%; object-fit: contain; object-position: left bottom;">
-                    <!-- Assuming Vector.svg is the full "SILQ" text/logo. If it's just the Q, this might look wrong. 
-                         But "Silq has vector.svg icon so you don't have to create this indidually" is the key. 
-                         I'll use it to fill the width of S-I-L-Q roughly. 
-                         Original width sum: 45+20+43+64 + gaps ~ 180px.
-                    -->
                 </div>
 
                 <!-- Top Row: RITUALS BY -->
-                <!-- R (Vector-7) -->
+                <!-- R (Vector-8) -->
                 <div style="width: 31.46px; height: 36.91px; left: 0px; top: 0.70px; position: absolute;">
-                    <img src="assets/Vector-7.svg" style="width: 100%; height: 100%; object-fit: contain;">
+                    <img src="assets/Vector-8.svg" style="width: 100%; height: 100%; object-fit: contain;">
                 </div>
-                <!-- I (Div - Blue) -->
-                <div
-                    style="width: 9.20px; height: 36.53px; left: 35.79px; top: 0.70px; position: absolute; background: #193E6A">
+                <!-- I (Vector-7) -->
+                <div style="width: 9.20px; height: 36.53px; left: 35.79px; top: 0.70px; position: absolute;">
+                    <img src="assets/Vector-7.svg" style="width: 100%; height: 100%; object-fit: contain;">
                 </div>
                 <!-- T (Vector-6) -->
                 <div style="width: 36.49px; height: 36.48px; left: 48.86px; top: 0.70px; position: absolute;">
@@ -228,9 +220,9 @@
                 <div style="width: 28.57px; height: 36.61px; left: 249.10px; top: 0.76px; position: absolute;">
                     <img src="assets/Vector-1.svg" style="width: 100%; height: 100%; object-fit: contain;">
                 </div>
-                <!-- Y (Vector-8) -->
+                <!-- Y (Vector.svg - Assumed 9) -->
                 <div style="width: 39.66px; height: 36.51px; left: 281.34px; top: 0.65px; position: absolute;">
-                    <img src="assets/Vector-8.svg" style="width: 100%; height: 100%; object-fit: contain;">
+                    <img src="assets/Vector.svg" style="width: 100%; height: 100%; object-fit: contain;">
                 </div>
             </div>
 
