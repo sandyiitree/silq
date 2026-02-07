@@ -629,15 +629,22 @@ footer {
 /* Navbar: Use same structure, just handle background/position */
 .about-nav {
     position: relative !important;
-    background: url('assets/DSC01313.jpg') center/cover no-repeat !important;
+    background-image: url('assets/SILQ INT (16 of 16).jpg') !important;
+    background-position: center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
     height: 80px;
-    /* Could be auto + padding to match home */
     padding: 0 5%;
-    /* Home has 40px 5%? Let's check */
     display: flex;
     /* Ensure flex for alignment */
     align-items: center;
     justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+    .about-nav {
+        background-image: url('assets/image_1.jpg') !important;
+    }
 }
 
 .about-nav::before {
