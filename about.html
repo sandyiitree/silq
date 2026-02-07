@@ -160,22 +160,7 @@
                      Let's place `Vector.svg` instead of the bottom row.
                      But wait, the previous CSS had distinct positions for S, I, L, Q.
                      If I use one image, I should position it to cover that area.
-                     
-                     BUT looking at the top row mapping:
-                     R (Vector-7)
-                     I (Div)
-                     T (Vector-6)
-                     U (Vector-5)
-                     A (Vector-4)
-                     L (Vector-3)
-                     S (Vector-2)
                 <!-- Bottom Row: SILQ (Replaced by Group.svg) -->
-                <!-- Positioning to cover the approximate area of SILQ (left~65px, width~180px)
-                     or centering it if Group.svg is the full logo unit.
-                     Given "silq is in group svg", it likely contains the whole word/logo.
-                     I'll stick to the previous S-I-L-Q bounding box approximation or just center it bottom?
-                     Original S left: 65.74, Q right edge: 181.25+64.79 = 246.04. Width = 180.3px.
-                -->
                 <div style="width: 180.3px; height: 73.82px; left: 65.74px; top: 53.18px; position: absolute;">
                     <img src="assets/Group.svg"
                         style="width: 100%; height: 100%; object-fit: contain; object-position: left bottom;">
