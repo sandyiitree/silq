@@ -141,6 +141,28 @@ img {
     color: white;
 }
 
+/* Hero Section Styles */
+.hero {
+    position: relative;
+    width: 100%;
+    /* Default height or overridden inline */
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.hero-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .nav-logo img {
     height: 40px;
     width: auto;
